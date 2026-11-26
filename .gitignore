@@ -1,0 +1,6 @@
+#node_modules/
+.vscode/
+.env.*
+start_script_node.sh
+assets/
+README.md
