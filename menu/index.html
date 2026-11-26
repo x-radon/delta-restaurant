@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="меню ресторана Дельта, цены на блюда, закуски, горячие блюда, десерты, напитки, доставка блюд, сортировка меню по цене, кухня ресторана"
+    />
+    <meta
+      name="description"
+      content="Меню ресторана «Дельта»: закуски, горячие блюда, десерты и напитки с ценами. Удобные фильтры по категориям и сортировка по цене — выберите блюдо за минуту."
+    />
+    <title>Меню — Ресторан «Дельта»</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/libs/fancybox.css" />
+    <link
+      rel="stylesheet"
+      href="../css/libs/swiper-bundle.min.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <script>
+      if (
+        window.location.pathname.endsWith("/") &&
+        document.readyState === "complete"
+      ) {
+        window.location.href = window.location.pathname.slice(0, -1);
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a href="/" class="logo">Дельта</a>
+        <nav id="nav">
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/menu">Меню</a></li>
+            <li><a href="/about">О ресторане</a></li>
+            <li><a href="/contacts">Контакты</a></li>
+          </ul>
+        </nav>
+        <a href="/booking/" class="btn">Забронировать</a>
+        <div class="burger" id="burger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </header>
+
+    <section class="section" style="padding-top: 50px">
+      <div class="container">
+        <h2 class="section-title" style="font-size: 48px">Меню ресторана</h2>
+        <div class="menu-controls">
+          <button class="chip active" data-filter="Все">Все</button>
+          <button class="chip" data-filter="Салаты">Салаты</button>
+          <button class="chip" data-filter="Супы">Супы</button>
+          <button class="chip" data-filter="Горячее">Горячее</button>
+          <button class="chip" data-filter="Десерты">Десерты</button>
+          <button class="chip" data-filter="Напитки">Напитки</button>
+        </div>
+        <div class="sort-wrap">
+          <select id="sort">
+            <option value="none">Сортировка</option>
+            <option value="asc">Цена: по возрастанию</option>
+            <option value="desc">Цена: по убыванию</option>
+          </select>
+        </div>
+        <div class="dishes" id="dishes">
+          <div class="dish" data-category="Салаты" data-price="480">
+            <img
+              src="../images/dishes/salat-s-rakovymi-shejkami.jpeg"
+              alt="Салат с раковыми шейками"
+              data-fancybox="menu"
+              data-caption="Салат с раковыми шейками"
+            />
+            <div class="dish-body">
+              <div class="dish-name">Салат с раковыми шейками</div>
+              <p>Раки, руккола, пармезан, цитрусовая заправка</p>
+              <span class="price">480 ₽</span>
+            </div>
+          </div>
+          <div class="dish" data-category="Салаты" data-price="320">
+            <img
+              src="../images/dishes/ovoshchi-astrahanskie.jpeg"
+              alt="Овощи по-астрахански"
+              data-fancybox="menu"
+              data-caption="Овощи по-астрахански"
+            />
+            <div class="dish-body">
+              <div class="dish-name">Овощи по-астрахански</div>
+              <p>Томаты, огурцы, зелень, масло с томатом</p>
+              <span class="price">320 ₽</span>
+            </div>
+          </div>
+          <div class="dish" data-category="Салаты" data-price="370">
+            <img
+              src="../images/dishes/seld-na-chernom-hlebe.jpeg"
+              alt="Сельдь на чёрном хлебе"
+              data-fancybox="menu"
+              data-caption="Сельдь на чёрном хлебе"
+            />
+            <div class="dish-body">
+              <div class="dish-name">Сельдь на чёрном хлебе</div>
+              <p>Астраханская сельдь, свёкла, сметана</p>
+              <span class="price">370 ₽</span>
+            </div>
+          </div>
+          <div class="dish" data-category="Супы" data-price="450">
+            <img
+              src="../images/dishes/uha-tsarskaya.jpeg"
+              alt="Уха царская"
+              data-fancybox="menu"
+              data-caption="Уха царская"
+            />
+            <div class="dish-body">
+              <div class="dish-name">Уха царская</div>
+              <p>Судак, стерлядь, картофель, зелень</p>
+              <span class="price">450 ₽</span>
+            </div>
+          </div>
+          <div class="dish" data-category="Супы" data-price="380">
+            <img
+              src="../images/dishes/borsch-volzhskij.jpeg"
+              alt="Борщ волжский"
+              data-fancybox="menu"
+              data-caption="Борщ волжский"
+            />
+            <div class="dish-body">
+              <div class="dish-name">Борщ волжский</div>
+              <p>Говядина, капуста, сметана, пампушки</p>
+              <span class="price">380 ₽</span>
+            </div>
+          </div>
+          <div class="dish" data-category="Супы" data-price="330">
+            <img
+              src="../images/dishes/krem-sup-iz-tykvy.jpeg"
+              alt="Крем-суп из тыквы"
+              data-fancybox="menu"
+              data-caption="Крем-суп из тыквы"
+            />
+            <div class="dish-body">
+              <div class="dish-name">Крем-суп из тыквы</div>
+              <p>Тыква, сливки, тыквенное масло</p>
+              <span class="price">330 ₽</span>
+            </div>
+          </div>
+          <div class="dish" data-category="Горячее" data-price="690">
+            <img
+              src="../images/dishes/sudak-na-uglyah.jpeg"
+              alt="Судак на углях"
+              data-fancybox="menu"
+              data-caption="Судак на углях"
+            />
+            <div class="dish-body">
+              <div class="dish-name">Судак на углях</div>
+              <p>Судак, овощи гриль, лимонный соус</p>
+              <span class="price">690 ₽</span>
+            </div>
+          </div>
+          <div class="dish" data-category="Горячее" data-price="540">
+            <img
+              src="../images/dishes/plov-astrahanskiy.jpeg"
+              alt="Плов по-астрахански"
+              data-fancybox="menu"
+              data-caption="Плов по-астрахански"
+            />
+            <div class="dish-body">
+              <div class="dish-name">Плов по-астрахански</div>
+              <p>Баранина, рис девзира, специи</p>
+              <span class="price">540 ₽</span>
+            </div>
+          </div>
+          <div class="dish" data-category="Горячее" data-price="620">
+            <img
+              src="../images/dishes/befstroganov-s-kartofelem.jpeg"
+              alt="Бефстроганов с картофелем"
+              data-fancybox="menu"
+              data-caption="Бефстроганов с картофелем"
+            />
+            <div class="dish-body">
+              <div class="dish-name">Бефстроганов с картофелем</div>
+              <p>Телятина, сливочный соус, пюре</p>
+              <span class="price">620 ₽</span>
+            </div>
+          </div>
+          <!--
+            <div class="dish" data-category="Горячее" data-price="320">
+              <img
+                src="../images/dishes/pirog-s-ryboj.jpeg"
+                alt="Пирог с рыбой"
+                data-fancybox="menu"
+                data-caption="Пирог с рыбой"
+              />
+              <div class="dish-body">
+                <div class="dish-name">Пирог с рыбой</div>
+                <p>Судак, рис, тесто на сметане</p>
+                <span class="price">320 ₽</span>
+              </div>
+            </div>
+          -->
+
+          <div class="dish" data-category="Десерты" data-price="320">
+            <img
+              src="../images/dishes/guryevskaya-kasha.jpeg"
+              alt="Гурьевская каша"
+              data-fancybox="menu"
+              data-caption="Гурьевская каша"
+            />
+            <div class="dish-body">
+              <div class="dish-name">Гурьевская каша</div>
+              <p>Молочные пенки, мёд, грецкий орех, курага</p>
+              <span class="price">320 ₽</span>
+            </div>
+          </div>
+          <div class="dish" data-category="Десерты" data-price="260">
+            <img
+              src="../images/dishes/medovik-domashnij.jpeg"
+              alt="Медовик домашний"
+              data-fancybox="menu"
+              data-caption="Медовик домашний"
+            />
+            <div class="dish-body">
+              <div class="dish-name">Медовик домашний</div>
+              <p>Мёд, сметанный крем, грецкий орех</p>
+              <span class="price">260 ₽</span>
+            </div>
+          </div>
+          <div class="dish" data-category="Десерты" data-price="280">
+            <img
+              src="../images/dishes/morkovnyj-tort.jpeg"
+              alt="Морковный торт"
+              data-fancybox="menu"
+              data-caption="Морковный торт"
+            />
+            <div class="dish-body">
+              <div class="dish-name">Морковный торт</div>
+              <p>Морковь, пряности, крем-чиз</p>
+              <span class="price">280 ₽</span>
+            </div>
+          </div>
+          <div class="dish" data-category="Напитки" data-price="150">
+            <img
+              src="../images/dishes/mors-klyukvennyj.jpeg"
+              alt="Морс клюквенный"
+              data-fancybox="menu"
+              data-caption="Морс клюквенный"
+            />
+            <div class="dish-body">
+              <div class="dish-name">Морс клюквенный</div>
+              <p>Домашний морс, 300 мл</p>
+              <span class="price">150 ₽</span>
+            </div>
+          </div>
+          <div class="dish" data-category="Напитки" data-price="180">
+            <img
+              src="../images/dishes/chaj-s-chabrecom.jpeg"
+              alt="Чай с чабрецом"
+              data-fancybox="menu"
+              data-caption="Чай с чабрецом"
+            />
+            <div class="dish-body">
+              <div class="dish-name">Чай с чабрецом</div>
+              <p>Травяной сбор, 400 мл</p>
+              <span class="price">180 ₽</span>
+            </div>
+          </div>
+          <div class="dish" data-category="Напитки" data-price="220">
+            <img
+              src="..../images/dishes/limonad-delta.jpeg"
+              alt="Лимонад «Дельта»"
+              data-fancybox="menu"
+              data-caption="Лимонад «Дельта»"
+            />
+            <div class="dish-body">
+              <div class="dish-name">Лимонад «Дельта»</div>
+              <p>Лайм, мята, тоник, 350 мл</p>
+              <span class="price">220 ₽</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="font-size: 24px">Дельта</div>
+          <p style="margin-top: 12px">
+            Ресторан волжской кухни на берегах дельты Волги. Свежая рыба,
+            собственный коптильный цех, панорамный зал с видом на реку.
+          </p>
+        </div>
+        <div>
+          <h3>Навигация</h3>
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/menu/">Меню</a></li>
+            <li><a href="/about/">О ресторане</a></li>
+            <li><a href="/booking/">Бронирование</a></li>
+            <li><a href="/contacts/">Контакты</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Контакты</h3>
+          <ul>
+            <li>г. Астрахань, наб. Приволжского Затона, 12</li>
+            <li><a href="tel:+78512000000">+7 (8512) 00-00-00</a></li>
+            <li>Ежедневно 12:00–23:00</li>
+            <li>info@delta-rest.ru</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy">© 2026 Ресторан «Дельта»</div>
+    </footer>
+    <script src="../js/libs/jquery-4.0.0.min.js"></script>
+    <script src="../js/libs/swiper-bundle.min.js"></script>
+    <script src="../js/libs/fancybox.umd.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

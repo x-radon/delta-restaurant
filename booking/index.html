@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="бронирование столика, заказать столик онлайн, ресторан Дельта бронь, столик на вечер, банкет заказ, форма бронирования, столик на дату, ресторан на праздник"
+    />
+    <meta
+      name="description"
+      content="Онлайн-бронирование столика в ресторане «Дельта»: выберите дату, время и количество гостей. Форма с проверкой данных — бронь занимает меньше минуты."
+    />
+    <title>Бронирование — Ресторан «Дельта»</title>
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/libs/fancybox.css" />
+    <link
+      rel="stylesheet"
+      href="../css/libs/swiper-bundle.min.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <style>
+    h2 {
+      color: var(--white);
+    }
+  </style>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a href="/" class="logo">Дельта</a>
+        <nav id="nav">
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/menu/">Меню</a></li>
+            <li><a href="/about/">О ресторане</a></li>
+            <li><a href="/contacts/">Контакты</a></li>
+          </ul>
+        </nav>
+        <a href="/booking/" class="btn">Забронировать</a>
+        <div class="burger" id="burger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </header>
+
+    <section class="section booking" style="padding-top: 50px">
+      <div class="container">
+        <h2 class="section-title" style="font-size: 48px">
+          Забронировать столик
+        </h2>
+        <form
+          class="card-form"
+          style="margin-top: 44px"
+          action="spasibo.html"
+          onsubmit="return validateBooking(this);"
+        >
+          <div class="field">
+            <label>Имя <span class="req">*</span></label>
+            <input type="text" name="name" id="b-name" />
+            <div class="error" id="e-name"></div>
+          </div>
+          <div class="field">
+            <label
+              >Телефон <span class="req">*</span> (маска: +7 (XXX)
+              XXX-XX-XX)</label
+            >
+            <input
+              type="tel"
+              name="phone"
+              id="b-phone"
+              placeholder="+7 (___) ___-__-__"
+            />
+            <div class="error" id="e-phone"></div>
+          </div>
+          <div class="field">
+            <label>Дата <span class="req">*</span></label>
+            <input type="date" name="date" id="b-date" />
+            <div class="error" id="e-date"></div>
+          </div>
+          <div class="field">
+            <label>Время <span class="req">*</span></label>
+            <input
+              type="time"
+              name="time"
+              id="b-time"
+              min="12:00"
+              max="22:30"
+            />
+            <div class="error" id="e-time"></div>
+          </div>
+          <div class="field">
+            <label>Количество гостей <span class="req">*</span></label>
+            <input
+              type="number"
+              name="guests"
+              id="b-guests"
+              min="1"
+              max="12"
+              value="2"
+            />
+            <div class="error" id="e-guests"></div>
+          </div>
+          <p class="form-note">
+            Отправляя заявку, вы соглашаетесь с политикой обработки персональных
+            данных.
+          </p>
+          <button type="submit" class="btn" style="width: 100%">
+            Забронировать
+          </button>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="font-size: 24px">Дельта</div>
+          <p style="margin-top: 12px">
+            Ресторан волжской кухни на берегах дельты Волги. Свежая рыба,
+            собственный коптильный цех, панорамный зал с видом на реку.
+          </p>
+        </div>
+        <div>
+          <h3>Навигация</h3>
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/menu/">Меню</a></li>
+            <li><a href="/about/">О ресторане</a></li>
+            <li><a href="/booking/">Бронирование</a></li>
+            <li><a href="/contacts/">Контакты</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Контакты</h3>
+          <ul>
+            <li>г. Астрахань, наб. Приволжского Затона, 12</li>
+            <li><a href="tel:+78512000000">+7 (8512) 00-00-00</a></li>
+            <li>Ежедневно 12:00–23:00</li>
+            <li>info@delta-rest.ru</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy">© 2026 Ресторан «Дельта»</div>
+    </footer>
+    <script src="../js/libs/jquery-4.0.0.min.js"></script>
+    <script src="../js/libs/swiper-bundle.min.js"></script>
+    <script src="../js/libs/fancybox.umd.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
